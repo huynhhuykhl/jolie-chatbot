@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: jolie-chatbot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FACEBOOK_PAGE_ACCESS_TOKEN
+        value: EAANPVqyt9KcBRBpfQVmW9F2kO4LzRrRjGwWCBivRIy2Sl9HHF4vnZCe8enWSh8kZAGiyvzZAIm2UZAvaO02V0NtjMpz2F5PUn5mZCDxNm6AXNVWG3pMjoRpWpnCLFnnehsPOugTUWsVCntnZBs3mloc6T4oiAZAEFFhcU5UnncoJ224hfR5aA9bJZAgTeiwzEsm3lIwZD
+      - key: FACEBOOK_VERIFY_TOKEN
+        value: jolie_verify_token_2026
+      - key: OPENAI_API_KEY
+        value: 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
